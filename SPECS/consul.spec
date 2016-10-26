@@ -55,9 +55,9 @@ mkdir -p %{buildroot}/%{_bindir}
 cp consul %{buildroot}/%{_bindir}
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}
 cp %{SOURCE5} %{buildroot}/%{_sysconfdir}/%{name}/consul.json-dist
-cp %{SOURCE6} %{buildroot}/%{_sysconfdir}/%{name}/
+cp -n %{SOURCE6} %{buildroot}/%{_sysconfdir}/%{name}/
 mkdir -p %{buildroot}/%{_sysconfdir}/sysconfig
-cp %{SOURCE1} %{buildroot}/%{_sysconfdir}/sysconfig/%{name}
+cp -n %{SOURCE1} %{buildroot}/%{_sysconfdir}/sysconfig/%{name}
 mkdir -p %{buildroot}/%{_sharedstatedir}/%{name}
 mkdir -p %{buildroot}/%{_datadir}/%{name}-ui
 cp -r index.html static %{buildroot}/%{_prefix}/share/%{name}-ui
